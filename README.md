@@ -18,8 +18,38 @@ SolVurai (சொல்வுரை — "The Art of Expression") is a full-stack 
 - 🎭 **Adapt** emotional tone dynamically (Happy → Angry → Respectful)
 - 📊 **Analyze** grammar, fluency, and vocabulary with AI scoring
 - 💾 **Save & Export** dialogues as PDF/TXT
-
+- 🔤 Tanglish → Tamil Unicode Conversion
+- 🌐 English → Tamil Intelligent Processing
+- 🌗 Dark / Light Theme Support
+- 📚 Daily Tamil Word & Proverb Recommendations
+- 🔐 Firebase Authentication (Google + Email Login)
+- 📈 Personalized Learning Dashboard
 ---
+
+## 🎓 Educational Impact
+
+SolVurai helps learners:
+
+- Practice conversational Tamil
+- Improve grammar and vocabulary
+- Understand emotional expression
+- Learn formal and literary Tamil
+- Preserve Tamil cultural heritage through AI
+
+The platform bridges modern AI technologies with Tamil language education, making learning more interactive and engaging.
+
+```
+## 🌐 Live Demo
+
+Frontend:
+https://your-vercel-url.vercel.app
+
+Backend:
+https://your-render-url.onrender.com
+
+Demo Video:
+https://youtube.com/your-demo-video
+
 
 ## 🏗️ Architecture Overview
 
@@ -56,7 +86,7 @@ SolVurai
 ### 1. Clone & Setup
 
 ```bash
-git clone https://github.com/your-team/solvurai
+git clone https://github.com/Rethika-2782/SolVurai.git
 cd solvurai
 ```
 
@@ -171,12 +201,30 @@ npx vercel --prod
 
 ---
 
-## 👥 Team
+## 📸 Screenshots
 
-Built with ❤️ for DTEC 2026 — Tamil Technology & Cultural Innovation
+### Welcome Screen
+![Welcome](docs/screenshots/welcome.png)
+
+### Dashboard
+![Dashboard](docs/screenshots/dashboard.png)
+
+### Dialogue Generator
+![Dialogue Generator](docs/screenshots/dialogue.png)
+
+
+## 🏆 DTEC 2026 Hackathon Submission
+
+Hackathon Title:
+SolVurai
+
+Category:
+Dialogue Generator / Sentence Builder
+
+Submitted for:
+DTEC 2026 Hackathon
+
+Primary Focus:
+Tamil AI Education, Dialogue Generation, Grammar Intelligence, and Language Learning
 
 ---
-
-## 📄 License
-
-MIT License — Free to use, modify, and distribute.
