@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Root tokens ─────────────────────────────── */
+:root {
+  --ink-950:  #050508;
+  --ink-900:  #0A0A14;
+  --ink-800:  #10101E;
+  --ink-700:  #16162A;
+  --saffron:  #FF6B1A;
+  --gold:     #FFB830;
+  --violet:   #7C3AED;
+  --glow:     #A855F7;
+  --kumkum:   #C8102E;
+  --surface:  rgba(255,255,255,0.04);
+  --border:   rgba(255,255,255,0.08);
+}
+
+/* ── Base ────────────────────────────────────── */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--ink-950);
+  color: rgba(255,255,255,0.88);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Thiruvalluvar heritage background ───────── */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/thiruvalluvar.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ensure all content sits above the bg */
+body > * { position: relative; z-index: 1; }
+
+/* ── Tamil font ──────────────────────────────── */
+.tamil {
+  font-family: 'Noto Sans Tamil', serif;
+  font-feature-settings: 'kern' 1;
+}
+
+/* ── Glassmorphism ───────────────────────────── */
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.glass-strong {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.glass-saffron {
+  background: rgba(255,107,26,0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,107,26,0.2);
+}
+.glass-violet {
+  background: rgba(124,58,237,0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(124,58,237,0.2);
+}
+
+/* ── Gradient text ───────────────────────────── */
+.gradient-saffron {
+  background: linear-gradient(135deg, #FF6B1A, #FFB830);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-violet {
+  background: linear-gradient(135deg, #7C3AED, #A855F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-hero {
+  background: linear-gradient(135deg, #FF6B1A 0%, #FFB830 40%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow ────────────────────────────────────── */
+.glow-saffron { box-shadow: 0 0 30px rgba(255,107,26,0.35); }
+.glow-violet  { box-shadow: 0 0 30px rgba(124,58,237,0.35); }
+.text-glow-gold { text-shadow: 0 0 20px rgba(255,184,48,0.8); }
+
+/* ── Kolam pattern ───────────────────────────── */
+.kolam-bg {
+  background-image: radial-gradient(circle, rgba(255,184,48,0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Scrollbar ───────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--ink-900); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#FF6B1A, #7C3AED);
+  border-radius: 3px;
+}
+
+/* ── Typing cursor ───────────────────────────── */
+.typing-cursor::after {
+  content: '|';
+  animation: typeCursor 1s step-end infinite;
+  color: var(--saffron);
+}
+
+/* ── Skeleton loader ─────────────────────────── */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.04) 25%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0.04) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+  border-radius: 8px;
+}
+
+/* ── Buttons ─────────────────────────────────── */
+.btn-saffron {
+  background: linear-gradient(135deg, #FF6B1A, #FFB830);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-saffron:hover {
+  box-shadow: 0 0 40px rgba(255,107,26,0.5), 0 4px 16px rgba(255,107,26,0.3);
+  transform: translateY(-1px);
+}
+.btn-saffron:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-violet {
+  background: linear-gradient(135deg, #7C3AED, #A855F7);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-violet:hover {
+  box-shadow: 0 0 40px rgba(124,58,237,0.5), 0 4px 16px rgba(124,58,237,0.3);
+  transform: translateY(-1px);
+}
+.btn-violet:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Heritage border decoration ─────────────── */
+.heritage-border {
+  border-image: linear-gradient(135deg, #FF6B1A, #FFB830, #7C3AED) 1;
+}
+
+/* ── Olaichuvadi (palm leaf) card style ──────── */
+.olaichuvadi {
+  background: linear-gradient(135deg, rgba(255,184,48,0.08), rgba(255,107,26,0.05));
+  border: 1px solid rgba(255,184,48,0.2);
+  border-radius: 4px 16px 4px 16px;
+  position: relative;
+}
+.olaichuvadi::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFB830, transparent);
+  border-radius: 2px;
+}
+.olaichuvadi::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF6B1A, transparent);
+  border-radius: 2px;
+}
+
+/* ── Keyframes ───────────────────────────────── */
+@keyframes fadeIn    { from { opacity: 0; }                          to { opacity: 1; } }
+@keyframes slideUp   { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes glowPulse { 0%,100% { opacity: 0.6; }                    50% { opacity: 1; } }
+@keyframes float     { 0%,100% { transform: translateY(0); }        50% { transform: translateY(-8px); } }
+@keyframes shimmer   { from { background-position: -200% 0; }       to { background-position: 200% 0; } }
+@keyframes typeCursor{ 0%,100% { opacity: 1; }                      50% { opacity: 0; } }
+@keyframes kolamSpin { from { transform: rotate(0deg); }            to { transform: rotate(360deg); } }
+@keyframes flamePulse{ 0%,100% { transform: scaleY(1); }            50% { transform: scaleY(1.08); } }
+
+/* ── Light mode ──────────────────────────────── */
+.light-mode {
+  --ink-950: #FDF8F0;
+  --ink-900: #F5EDD8;
+  --ink-800: #EDE0C4;
+  --ink-700: #E0CFA8;
+  --surface: rgba(0,0,0,0.03);
+  --border:  rgba(0,0,0,0.08);
+}
+.light-mode body {
+  background-color: #FDF8F0;
+  color: rgba(30,15,5,0.88);
+}
+.light-mode body::before {
+  opacity: 0.06;
+  filter: sepia(0.3);
+}
+.light-mode .glass {
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(180,120,40,0.15);
+}
+.light-mode .glass-strong {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(180,120,40,0.2);
+}
+.light-mode .text-white    { color: rgba(30,15,5,0.9)  !important; }
+.light-mode .text-white\/80{ color: rgba(30,15,5,0.8)  !important; }
+.light-mode .text-white\/70{ color: rgba(30,15,5,0.7)  !important; }
+.light-mode .text-white\/60{ color: rgba(30,15,5,0.6)  !important; }
+.light-mode .text-white\/50{ color: rgba(30,15,5,0.5)  !important; }
+.light-mode .text-white\/40{ color: rgba(30,15,5,0.4)  !important; }
+.light-mode .text-white\/30{ color: rgba(30,15,5,0.3)  !important; }
+.light-mode .text-white\/25{ color: rgba(30,15,5,0.25) !important; }
+.light-mode .text-white\/20{ color: rgba(30,15,5,0.2)  !important; }
+.light-mode .bg-white\/5   { background: rgba(0,0,0,0.04) !important; }
+.light-mode .bg-white\/10  { background: rgba(0,0,0,0.07) !important; }
+.light-mode .border-white\/8{ border-color: rgba(0,0,0,0.08) !important; }
+.light-mode ::-webkit-scrollbar-track { background: #F5EDD8; }
