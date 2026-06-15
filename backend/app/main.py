@@ -1,8 +1,3 @@
-"""
-SolVurai — FastAPI Backend
-Entry point: initializes app, CORS, routes.
-"""
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import get_settings
@@ -14,20 +9,17 @@ app = FastAPI(
     title="SolVurai API",
     description="AI-powered Tamil Dialogue & Expression Platform",
     version="1.0.0",
-    docs_url="/docs",
-    redoc_url="/redoc",
 )
 
-# ── CORS ──────────────────────────────────────────────────
+# Allow ALL origins — fixes CORS for Vercel deployment
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.origins_list,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# ── Routes ────────────────────────────────────────────────
 app.include_router(health.router,    prefix="/api")
 app.include_router(generate.router,  prefix="/api")
 app.include_router(transform.router, prefix="/api")
