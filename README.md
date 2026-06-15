@@ -39,16 +39,18 @@ SolVurai helps learners:
 The platform bridges modern AI technologies with Tamil language education, making learning more interactive and engaging.
 
 ```
-## 🌐 Live Demo
-
+## 🌐 Live demo
 Frontend:
-[https://your-vercel-url.vercel.app](https://solvurai.vercel.app/)
+
+https://solvurai.vercel.app
 
 Backend:
-[https://your-render-url.onrender.com](https://solvurai.onrender.com/)
+
+https://solvurai.onrender.com
 
 Demo Video:
-https://youtube.com/your-demo-video
+
+https://drive.google.com/file/d/1YXzBcSk2gakHegIUogH8n8Myk8S3DQ7k/view?usp=drivesdk
 
 
 ## 🏗️ Architecture Overview
@@ -226,6 +228,14 @@ These are the screenshots of the website :
 <img width="1918" height="917" alt="Screenshot 2026-06-15 162146" src="https://github.com/user-attachments/assets/a91e09a7-f499-44c9-adf6-9acfa75148c3" />
 <img width="1918" height="912" alt="Screenshot 2026-06-15 164254" src="https://github.com/user-attachments/assets/4baaee71-ac6c-4b57-8f1f-e27d96a7f37c" />
 <img width="1918" height="900" alt="Screenshot 2026-06-15 164313" src="https://github.com/user-attachments/assets/f1e48137-c73a-466d-8b94-8a71172a957b" />
+
+Mobile Respnosive too.. 
+
+https://drive.google.com/file/d/1jV67mbVRdnYXSj5oeFyIBpnh4EKCvY0l/view?usp=drivesdk
+
+https://drive.google.com/file/d/1DKrnSzJBM8wqaIZ825BQx7jdJbcVoHa8/view?usp=drivesdk
+
+https://drive.google.com/file/d/1EszSPKa3QjsJYRXV7PWZ_SEbAerYB6bj/view?usp=drivesdk
 
 
 ## 🏆 DTEC 2026 Hackathon Submission
