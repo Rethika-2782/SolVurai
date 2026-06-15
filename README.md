@@ -42,10 +42,10 @@ The platform bridges modern AI technologies with Tamil language education, makin
 ## 🌐 Live Demo
 
 Frontend:
-https://your-vercel-url.vercel.app
+[https://your-vercel-url.vercel.app](https://solvurai.vercel.app/)
 
 Backend:
-https://your-render-url.onrender.com
+[https://your-render-url.onrender.com](https://solvurai.onrender.com/)
 
 Demo Video:
 https://youtube.com/your-demo-video
@@ -129,7 +129,7 @@ uvicorn app.main:app --reload
 
 **Environment variables** (`backend/.env`):
 ```env
-GEMINI_API_KEY=your_gemini_api_key
+GROQ_API_KEY=your_groq_api_key
 FIREBASE_SERVICE_ACCOUNT_PATH=./firebase-service-account.json
 ALLOWED_ORIGINS=http://localhost:3000,https://solvurai.vercel.app
 ```
@@ -180,10 +180,10 @@ npx vercel --prod
 
 | Feature | Description | AI Model |
 |---------|-------------|----------|
-| Dialogue Generator | 8 scenarios × 7 emotions × 4 styles | Gemini 1.5 Flash |
-| Style Transformer | Convert between Tamil variants | Gemini 1.5 Flash |
-| Emotion Engine | Adapt emotional tone dynamically | Gemini 1.5 Flash |
-| Grammar Intelligence | Score + explain Tamil grammar | Gemini 1.5 Flash |
+| Dialogue Generator | 8 scenarios × 7 emotions × 4 styles | Groq |
+| Style Transformer | Convert between Tamil variants | Groq |
+| Emotion Engine | Adapt emotional tone dynamically | Groq |
+| Grammar Intelligence | Score + explain Tamil grammar | Groq |
 | History System | Firebase-backed save/search/delete | Firestore |
 | Export | PDF + TXT formatted download | Client-side |
 
@@ -203,14 +203,29 @@ npx vercel --prod
 
 ## 📸 Screenshots
 
-### Welcome Screen
-![Welcome](docs/screenshots/welcome.png)
-
-### Dashboard
-![Dashboard](docs/screenshots/dashboard.png)
-
-### Dialogue Generator
-![Dialogue Generator](docs/screenshots/dialogue.png)
+These are the screenshots of the website : 
+ 
+<img width="1918" height="972" alt="Screenshot 2026-06-15 155443" src="https://github.com/user-attachments/assets/6b7d38db-cb12-4430-b547-9d09ed646df7" />
+<img width="1918" height="967" alt="Screenshot 2026-06-15 155505" src="https://github.com/user-attachments/assets/835a2352-2592-462b-9b89-6b6dc929d7d9" />
+<img width="1915" height="971" alt="Screenshot 2026-06-15 155537" src="https://github.com/user-attachments/assets/8f0ef312-b9a0-4b4b-8828-ae210f8b0a11" />
+<img width="1918" height="971" alt="Screenshot 2026-06-15 155600" src="https://github.com/user-attachments/assets/f240d1bd-1047-4bfd-960c-dc3a93723687" />
+<img width="1912" height="907" alt="Screenshot 2026-06-15 155737" src="https://github.com/user-attachments/assets/2626384f-9959-4c5f-92a3-ff839d9ed607" />
+<img width="1918" height="902" alt="Screenshot 2026-06-15 161830" src="https://github.com/user-attachments/assets/982604cc-e0c0-423a-9cb0-5cf803e44d5e" />
+<img width="1917" height="912" alt="Screenshot 2026-06-15 162816" src="https://github.com/user-attachments/assets/ab1270a8-e935-43f9-9ddc-b6d705aa5892" />
+<img width="1918" height="905" alt="Screenshot 2026-06-15 162840" src="https://github.com/user-attachments/assets/95518fbe-14fd-44d3-b42d-7006e5caa314" />
+<img width="1918" height="907" alt="Screenshot 2026-06-15 162854" src="https://github.com/user-attachments/assets/4e662a72-173d-470f-8f39-1f95a202c3e6" />
+<img width="1918" height="912" alt="Screenshot 2026-06-15 162912" src="https://github.com/user-attachments/assets/d13d6647-bc76-428c-ad64-9d3fa0415586" />
+<img width="1918" height="907" alt="Screenshot 2026-06-15 162232" src="https://github.com/user-attachments/assets/6f89f65c-b75f-46c0-b6c8-15a995e4d1a6" />
+<img width="1918" height="906" alt="Screenshot 2026-06-15 162302" src="https://github.com/user-attachments/assets/e6a61408-ca9f-4797-a5f6-278bca20743c" />
+<img width="1917" height="912" alt="Screenshot 2026-06-15 162334" src="https://github.com/user-attachments/assets/df433d33-1a4a-4b17-8363-04dcf2beced4" />
+<img width="1915" height="915" alt="Screenshot 2026-06-15 162355" src="https://github.com/user-attachments/assets/2d0a8ad7-a9fe-4d67-8e03-e7ab66ea0251" />
+<img width="1917" height="907" alt="Screenshot 2026-06-15 162421" src="https://github.com/user-attachments/assets/fb86023b-e3bb-4757-be3c-e960ccd48200" />
+<img width="1918" height="911" alt="Screenshot 2026-06-15 162446" src="https://github.com/user-attachments/assets/1a762e0c-aebe-4ab4-b7be-67f32ee3be8a" />
+<img width="1918" height="911" alt="Screenshot 2026-06-15 162507" src="https://github.com/user-attachments/assets/e0403a73-1f1b-4f33-81ec-8329d61a5fee" />
+<img width="1918" height="912" alt="Screenshot 2026-06-15 162131" src="https://github.com/user-attachments/assets/3c576c32-0fe5-4be6-b1dd-0cb555b598c3" />
+<img width="1918" height="917" alt="Screenshot 2026-06-15 162146" src="https://github.com/user-attachments/assets/a91e09a7-f499-44c9-adf6-9acfa75148c3" />
+<img width="1918" height="912" alt="Screenshot 2026-06-15 164254" src="https://github.com/user-attachments/assets/4baaee71-ac6c-4b57-8f1f-e27d96a7f37c" />
+<img width="1918" height="900" alt="Screenshot 2026-06-15 164313" src="https://github.com/user-attachments/assets/f1e48137-c73a-466d-8b94-8a71172a957b" />
 
 
 ## 🏆 DTEC 2026 Hackathon Submission
